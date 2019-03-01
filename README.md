@@ -4,7 +4,17 @@ This repository contains an example of some issues concerning *npm packages* and
 
 ## Scenario
 
-The project consists of a main application (`src/app`), an npm package (`src/lib`) and a dynamic loaded module (`src/widget`), i.e. a module autonomously built and dynamically loaded by the main application.
+The production scenario consists of a React application `app`, an *npm* package `lib` and a bundle `widget`.
+
+The `lib` and the `widget` are built independently each other. They have independent projects and independent builds.
+
+The `app` is built with `lib` as an *npm* dependency.
+
+The `widget` is dynamically loaded with dynamic `import()`.
+
+
+
+The project in this repository is a simplification of the production scenario, just for analysis. It consists of a main application (`src/app`), an *npm* package (`src/lib`) and a dynamic loaded module (`src/widget`).
 
 ## Reproducing the issues
 
